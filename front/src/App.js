@@ -12,10 +12,6 @@ const handleChange = (event) => {
   setInputs(values => ({...values, [name]: value}))
 }
 
-const handleSubmit = (event) => {
-  event.preventDefault();
-  alert(inputs);
-}
   return (
     <div className="App">
       <form /*onSubmit={handleSubmit}*/>
