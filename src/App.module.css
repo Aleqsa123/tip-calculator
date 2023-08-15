@@ -1,0 +1,48 @@
+.mainDiv {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+form {
+  margin-top: 40px;
+  width: 375px;
+  height: 789px;
+  border-radius: 25px 25px 0px 0px;
+  background: hsla(0, 0%, 100%, 1);
+  padding: 32px;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: hsla(186, 14%, 43%, 1);
+  margin: 0px;
+}
+
+.billamount {
+  width: 311px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border-color: transparent;
+  background: #F3F9FA;
+  background-image: url("./../public/images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 16px;
+  background-position: 16px 19px;
+  color: #00474B;
+  font-family: Space Mono;
+  text-align: right;
+  font-size: 24px;
+  padding-right: 17px;
+  margin-top: 6px;
+}

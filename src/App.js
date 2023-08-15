@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import './App.css';
+import styles from './App.module.css';
 
 function App() {
 
@@ -26,19 +26,18 @@ const handleChangeCustom = (event) => {
 }
 
   return (
+    <div className={styles.mainDiv}>
+      <img src='./images/logo.svg' alt="logo splitter" />
       <form>
-        <div>
           <h2>Bill:</h2>
-          <label>
           <input 
             type="text" 
             name="billamount" 
+            className={styles.billamount}
             value={inputs.billamount || ""} 
-            placeholder='$                    0'
+            placeholder='0'
             onChange={handleChangeBP}
           />
-          </label>
-        </div>
 
         <div>
           <h2>Select Tip %</h2>
@@ -82,6 +81,7 @@ const handleChangeCustom = (event) => {
 
         </div>     
       </form>
+      </div>
 )}
 
 export default App;    
