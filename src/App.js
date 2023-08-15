@@ -1,20 +1,32 @@
-import  {useState} from 'react';
+import {useState} from 'react';
 import './App.css';
-import {} from './components/styled-components';
 
 function App() {
 
 const [inputs, setInputs] = useState({});
 
-const handleChange = (event) => {
+const handleChangeBP = (event) => {
   const name = event.target.name;
   const value = Number(event.target.value);
   setInputs(values => ({...values, [name]: value}))
 }
 
+const handleChange = (event) => {
+  const name = event.target.name;
+  const value = Number(event.target.value);
+  inputs.custom = "";
+  setInputs(values => ({...values, [name]: value}))
+}
+
+const handleChangeCustom = (event) => {
+  const name = event.target.name;
+  const value = Number(event.target.value);
+  inputs.tip = value;
+  setInputs(values => ({...values, [name]: value}))
+}
+
   return (
-    <div className="App">
-      <form /*onSubmit={handleSubmit}*/>
+      <form>
         <div>
           <h2>Bill:</h2>
           <label>
@@ -23,7 +35,7 @@ const handleChange = (event) => {
             name="billamount" 
             value={inputs.billamount || ""} 
             placeholder='$                    0'
-            onChange={handleChange}
+            onChange={handleChangeBP}
           />
           </label>
         </div>
@@ -38,38 +50,38 @@ const handleChange = (event) => {
 
             <input 
               type="text" 
-              name="tip" 
-              value={inputs.tip || ""}
+              name="custom" 
+              value={inputs.custom || ""}
               placeholder='Custom'
-              onChange={handleChange}
+              onChange={handleChangeCustom}
             />
         </div>
 
         <div>
         <h2>Number of People</h2>
+        <p>can't be zero</p>
           <label>
             <input 
               type="text" 
               name="people" 
               value={inputs.people || ""} 
               placeholder='0'
-              onChange={handleChange}
+              onChange={handleChangeBP}
             />
           </label>
         </div>
 
         <div>
         <p> Tip Amount <span>/ person</span> </p>
-          <p>$ {((inputs.billamount*inputs.tip/100)/inputs.people).toFixed(2) || "0.00"} </p>
+        <p>{inputs.people > 0 ? ((inputs.billamount*inputs.tip/100)/inputs.people).toFixed(2) : "0.00"}</p>
 
-          <p> Total <span>/ person</span></p>
-          <p>${(((inputs.billamount*inputs.tip/100)+inputs.billamount)/inputs.people).toFixed(2) || "0.00"}</p> 
-          
+        <p> Total <span>/ person</span></p>
+        <p>{inputs.people > 0 ? (((inputs.billamount*inputs.tip/100)+inputs.billamount)/inputs.people).toFixed(2) : "0.00"} </p>
+
         <input type="reset" name="Reset" onClick={() => setInputs({})} />
 
         </div>     
       </form>
-    </div>
 )}
 
 export default App;    
