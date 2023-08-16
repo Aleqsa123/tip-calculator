@@ -1,4 +1,5 @@
 .mainDiv {
+  box-sizing: border-box;
   display: grid;
   justify-content: center;
   align-items: center;
@@ -15,7 +16,7 @@ form {
   height: 789px;
   border-radius: 25px 25px 0px 0px;
   background: hsla(0, 0%, 100%, 1);
-  padding: 32px;
+  padding: 0 32px 32px 32px;
 }
 
 h2 {
@@ -25,11 +26,12 @@ h2 {
   letter-spacing: 0px;
   text-align: left;
   color: hsla(186, 14%, 43%, 1);
-  margin: 0px;
+  margin: 0;
+  margin-top: 32px;
 }
 
 .billamount {
-  width: 311px;
+  width: 353px;
   height: 48px;
   flex-shrink: 0;
   border-radius: 5px;
@@ -45,4 +47,73 @@ h2 {
   font-size: 24px;
   padding-right: 17px;
   margin-top: 6px;
+}
+
+.tipsDiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.percentbtn {
+  width: 178.631px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #00474B;
+  color: #FFF;
+  text-align: center;
+  font-family: Space Mono;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.custom {
+  box-sizing: border-box;
+  width: 178.631px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #F3F9FA;
+  color: #547878;
+  text-align: right;
+  font-family: Space Mono;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding-right: 18px;
+  border-color: transparent;
+}
+
+.peopleamount {
+  width: 353px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border-color: transparent;
+  background: #F3F9FA;
+  background-image: url("./../public/images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-size: 10px 16px;
+  background-position: 16px 19px;
+  color: #00474B;
+  font-family: Space Mono;
+  text-align: right;
+  font-size: 24px;
+  padding-right: 17px;
+  margin-top: 6px;
+}
+
+.zero {
+  color: #E17457;
+  text-align: right;
+  font-family: Space Mono;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-left: 80px;
 }

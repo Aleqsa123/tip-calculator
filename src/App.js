@@ -39,17 +39,18 @@ const handleChangeCustom = (event) => {
             onChange={handleChangeBP}
           />
 
-        <div>
           <h2>Select Tip %</h2>
-            <button type="button" name="tip" value={5} onClick={handleChange}>5%</button>
-            <button type="button" name="tip" value={10} onClick={handleChange}>10%</button>
-            <button type="button" name="tip" value={15} onClick={handleChange}>15%</button>
-            <button type="button" name="tip" value={25} onClick={handleChange}>25%</button>
-            <button type="button" name="tip" value={50} onClick={handleChange}>50%</button>
+          <div className={styles.tipsDiv}>
+            <button className={styles.percentbtn} type="button" name="tip" value={5} onClick={handleChange}>5%</button>
+            <button className={styles.percentbtn} type="button" name="tip" value={10} onClick={handleChange}>10%</button>
+            <button className={styles.percentbtn} type="button" name="tip" value={15} onClick={handleChange}>15%</button>
+            <button className={styles.percentbtn} type="button" name="tip" value={25} onClick={handleChange}>25%</button>
+            <button className={styles.percentbtn} type="button" name="tip" value={50} onClick={handleChange}>50%</button>
 
             <input 
               type="text" 
               name="custom" 
+              className={styles.custom}
               value={inputs.custom || ""}
               placeholder='Custom'
               onChange={handleChangeCustom}
@@ -57,17 +58,15 @@ const handleChangeCustom = (event) => {
         </div>
 
         <div>
-        <h2>Number of People</h2>
-        <p>can't be zero</p>
-          <label>
+        <h2>Number of People <span className={styles.zero}>can't be zero</span></h2>
             <input 
               type="text" 
-              name="people" 
+              name="people"
+              className={styles.peopleamount} 
               value={inputs.people || ""} 
               placeholder='0'
               onChange={handleChangeBP}
             />
-          </label>
         </div>
 
         <div>
