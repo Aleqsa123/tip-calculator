@@ -69,14 +69,14 @@ const handleChangeCustom = (event) => {
             />
         </div>
 
-        <div>
-        <p> Tip Amount <span>/ person</span> </p>
-        <p>{inputs.people > 0 ? ((inputs.billamount*inputs.tip/100)/inputs.people).toFixed(2) : "0.00"}</p>
+        <div className={styles.displayDiv}>
+        <p className={styles.tipamount}> Tip Amount <br/> <span className={styles.personspan}>/ person </span> </p>
+        <p className={styles.resultsp}>${inputs.people > 0 ? ((inputs.billamount*inputs.tip/100)/inputs.people).toFixed(2) : "0.00"}</p>
 
-        <p> Total <span>/ person</span></p>
-        <p>{inputs.people > 0 ? (((inputs.billamount*inputs.tip/100)+inputs.billamount)/inputs.people).toFixed(2) : "0.00"} </p>
+        <p className={styles.tipamount}> Total <br/> <span className={styles.personspan}> / person </span> </p>
+        <p className={styles.resultsp}>${inputs.people > 0 ? (((inputs.billamount*inputs.tip/100)+inputs.billamount)/inputs.people).toFixed(2) : "0.00"} </p>
 
-        <input type="reset" name="Reset" onClick={() => setInputs({})} />
+        <input type="reset" name="Reset" className={styles.reset} onClick={() => setInputs({})} />
 
         </div>     
       </form>
