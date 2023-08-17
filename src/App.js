@@ -5,12 +5,15 @@ function App() {
 
 const [inputs, setInputs] = useState({});
 
+// Changes value of Bill and People Amount fields onChange
 const handleChangeBP = (event) => {
   const name = event.target.name;
   const value = Number(event.target.value);
   setInputs(values => ({...values, [name]: value}))
 }
 
+/* Changes value of Tips persent on button clicks and sets
+ Custom filed value to ""*/
 const handleChange = (event) => {
   const name = event.target.name;
   const value = Number(event.target.value);
@@ -18,6 +21,7 @@ const handleChange = (event) => {
   setInputs(values => ({...values, [name]: value}))
 }
 
+// Changes value of tip percent onChange in Custom field
 const handleChangeCustom = (event) => {
   const name = event.target.name;
   const value = Number(event.target.value);
