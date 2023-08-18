@@ -33,6 +33,7 @@ const handleChangeCustom = (event) => {
     <div className={styles.mainDiv}>
       <img src='./images/logo.svg' alt="logo splitter" />
       <form>
+        <div className={styles.inputDiv}>
           <h2>Bill:</h2>
           <input 
             type="text" 
@@ -71,6 +72,7 @@ const handleChangeCustom = (event) => {
               placeholder='0'
               onChange={handleChangeBP}
             />
+        </div>
         </div>
 
         <div className={styles.displayDiv}>
