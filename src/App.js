@@ -63,11 +63,11 @@ const handleChangeCustom = (event) => {
         </div>
 
         <div>
-        <h2>Number of People <span className={styles.zero}>can't be zero</span></h2>
+        <h2>Number of People <span className={inputs.people === 0 ? styles.zerod : styles.zero}>can't be zero</span></h2>
             <input 
               type="text" 
               name="people"
-              className={styles.peopleamount} 
+              className={inputs.people === 0 ? styles.peopleAmountZero : styles.peopleamount} 
               value={inputs.people || ""} 
               placeholder='0'
               onChange={handleChangeBP}

@@ -102,7 +102,35 @@ h2 {
   margin-left: 8px;
 }
 
+.peopleAmountZero {
+  width: 311px;
+  height: 48px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  border: 2px solid #E17052;
+  background: #F3F9FA;
+  background-image: url("./../public/images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: center left 17px;
+  color: #00474B;
+  text-align: right;
+  font-size: 24px;
+  padding-right: 17px;
+  margin-top: 6px;
+  margin-left: 8px;
+}
+
 .zero {
+  display: none;
+  color: #E17457;
+  text-align: right;
+  font-size: 16px;
+  line-height: normal;
+  margin-left: 15px;
+}
+
+.zerod {
+  display: inline-block;
   color: #E17457;
   text-align: right;
   font-size: 16px;
@@ -197,6 +225,7 @@ h2 {
   }
   
   .peopleamount,
+  .peopleAmountZero,
   .billamount {
     width: 379px;
     margin-left: 43px;
@@ -215,8 +244,8 @@ h2 {
     width: 117px;
   }
 
-  .zero {
-    margin-left: 84px;
+  .zerod {
+    margin-left: 80px;
   }
   
   .displayDiv {
