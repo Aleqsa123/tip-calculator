@@ -46,11 +46,11 @@ const handleChangeCustom = (event) => {
 
           <h2>Select Tip %</h2>
           <div className={styles.tipsDiv}>
-            <button className={styles.percentbtn} type="button" name="tip" value={5} onClick={handleChange}>5%</button>
-            <button className={styles.percentbtn} type="button" name="tip" value={10} onClick={handleChange}>10%</button>
-            <button className={styles.percentbtn} type="button" name="tip" value={15} onClick={handleChange}>15%</button>
-            <button className={styles.percentbtn} type="button" name="tip" value={25} onClick={handleChange}>25%</button>
-            <button className={styles.percentbtn} type="button" name="tip" value={50} onClick={handleChange}>50%</button>
+            <button className={inputs.tip === 5 ? styles.clickedbtn : styles.percentbtn} type="button" name="tip" value={5} onClick={handleChange}>5%</button>
+            <button className={inputs.tip === 10 ? styles.clickedbtn : styles.percentbtn} type="button" name="tip" value={10} onClick={handleChange}>10%</button>
+            <button className={inputs.tip === 15 ? styles.clickedbtn : styles.percentbtn} type="button" name="tip" value={15} onClick={handleChange}>15%</button>
+            <button className={inputs.tip === 25 ? styles.clickedbtn : styles.percentbtn} type="button" name="tip" value={25} onClick={handleChange}>25%</button>
+            <button className={inputs.tip === 50 ? styles.clickedbtn : styles.percentbtn} type="button" name="tip" value={50} onClick={handleChange}>50%</button>
 
             <input 
               type="text" 
@@ -82,7 +82,7 @@ const handleChangeCustom = (event) => {
         <p className={styles.tipamount}> Total <br/> <span className={styles.personspan}> / person </span> </p>
         <p className={styles.resultsp}>${inputs.people > 0 ? (((inputs.billamount*inputs.tip/100)+inputs.billamount)/inputs.people).toFixed(2) : "0.00"} </p>
 
-        <input type="reset" name="Reset" className={styles.reset} onClick={() => setInputs({})} />
+        <input type="reset" name="Reset" className={Object.keys(inputs).length === 0 ? styles.dreset : styles.reset} onClick={() => setInputs({})} />
 
         </div>     
       </form>
