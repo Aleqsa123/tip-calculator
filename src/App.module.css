@@ -126,6 +126,7 @@ h2 {
   height: 48px;
   flex-shrink: 0;
   border-radius: 5px;
+  outline: none;
   border: 2px solid #E17052;
   background: #F3F9FA;
   background-image: url("./../public/images/icon-person.svg");
